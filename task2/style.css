@@ -1,0 +1,473 @@
+```css
+/* 1. Общие настройки */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #182A22;
+    color: #F2EEE6;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button,
+a,
+input,
+textarea {
+    transition: color 0.2s, background-color 0.2s,
+                border-color 0.2s, box-shadow 0.2s;
+}
+
+section {
+    padding: 56px 20px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+.eyebrow {
+    color: #B8C8B5;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* 2. Шапка сайта */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 20px;
+    background-color: #182A22;
+    border-bottom: 1px solid #34483B;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #C18A8C;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: 1px solid #D6DDD2;
+    border-radius: 8px;
+    background-color: #D6DDD2;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #182A22;
+}
+
+.nav-links {
+    display: none;
+    align-items: center;
+    gap: 26px;
+}
+
+.nav-links a {
+    color: #E2E7DE;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #C18A8C;
+}
+
+/* 3. Главный экран */
+
+.hero {
+    background-color: #4A202D;
+    color: #F2EEE6;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-copy {
+    align-self: center;
+}
+
+.hero-copy h1 span {
+    color: #D6AAA7;
+}
+
+.hero-description {
+    max-width: 520px;
+    margin-bottom: 28px;
+    color: #E2D5D2;
+}
+
+.hero-art img {
+    height: 320px;
+    border-radius: 180px 180px 12px 12px;
+    background-color: #69404A;
+}
+
+.hero-art p {
+    margin: 12px 0 0;
+    color: #E2D5D2;
+    font-size: 13px;
+    text-align: center;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 22px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button-primary {
+    background-color: #D6DDD2;
+    color: #182A22;
+}
+
+.button-primary:hover {
+    background-color: #F2EEE6;
+}
+
+.button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #C18A8C;
+    outline-offset: 3px;
+}
+
+/* 4. Заголовки разделов */
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 32px;
+    text-align: center;
+}
+
+.section-heading > p:last-child {
+    color: #C6D0C4;
+}
+
+/* 5. Коллекция игрушек */
+
+.collection {
+    background-color: #182A22;
+    color: #F2EEE6;
+}
+
+.toy-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.toy-card {
+    overflow: hidden;
+    background-color: #F2EEE6;
+    border: 1px solid #D6DDD2;
+    border-radius: 12px;
+    color: #29362F;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.toy-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.toy-card img {
+    height: 260px;
+    background-color: #D6DDD2;
+}
+
+.toy-info {
+    padding: 20px;
+}
+
+.toy-info h3 {
+    margin-bottom: 8px;
+}
+
+.toy-info p {
+    margin-bottom: 0;
+    color: #59665C;
+    font-size: 14px;
+}
+
+/* 6. О мастерской */
+
+.about {
+    background-color: #263B30;
+    color: #F2EEE6;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    color: #D5DED4;
+}
+
+.material-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.material-list span {
+    padding: 8px 14px;
+    border: 1px solid #D6DDD2;
+    border-radius: 30px;
+    background-color: #D6DDD2;
+    color: #182A22;
+    font-size: 13px;
+}
+
+/* 7. Форма обратной связи */
+
+.contact {
+    background-color: #4A202D;
+    color: #F2EEE6;
+}
+
+.contact .section-heading > p:last-child {
+    color: #E2D5D2;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    margin-top: 8px;
+    color: #F2EEE6;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #D6C9C7;
+    border-radius: 6px;
+    background-color: #F2EEE6;
+    color: #29362F;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #C18A8C;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(193, 138, 140, 0.25);
+}
+
+.contact-form .button {
+    align-self: flex-start;
+    margin-top: 12px;
+}
+
+.form-note {
+    margin: 0;
+    color: #E2D5D2;
+    font-size: 12px;
+}
+
+/* 8. Подвал */
+
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 30px 20px;
+    background-color: #182A22;
+    color: #F2EEE6;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+    color: #D5DED4;
+    font-size: 13px;
+}
+
+/* 9. Планшеты */
+
+@media (min-width: 768px) {
+    section {
+        padding: 76px 36px;
+    }
+
+    .site-header {
+        padding: 20px 36px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .hero-art img {
+        height: 420px;
+    }
+
+    .toy-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .toy-card:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .toy-card:first-child img {
+        height: 340px;
+    }
+
+    .about-grid {
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 48px;
+    }
+
+    .section-heading {
+        margin-bottom: 42px;
+    }
+}
+
+/* 10. Большие экраны */
+
+@media (min-width: 1200px) {
+    .site-header {
+        padding-right: max(48px, calc((100% - 1200px) / 2));
+        padding-left: max(48px, calc((100% - 1200px) / 2));
+    }
+
+    section {
+        padding: 96px 48px;
+    }
+
+    .hero-grid {
+        gap: 72px;
+    }
+
+    .hero-art img {
+        height: 500px;
+    }
+
+    .toy-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    .toy-card:first-child {
+        grid-column: auto;
+    }
+
+    .toy-card:first-child img {
+        height: 280px;
+    }
+
+    .toy-card img {
+        height: 280px;
+    }
+
+    .toy-card:last-child {
+        grid-column: 2;
+    }
+}

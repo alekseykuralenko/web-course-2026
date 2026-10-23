@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Soft Things — игрушки ручной работы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a class="logo" href="#home">soft things<span>.</span></a>
+
+        <button class="menu-toggle" type="button" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-links" aria-label="Основная навигация">
+            <a href="#collection">Коллекция</a>
+            <a href="#about">О мастерской</a>
+            <a href="#contact">Связаться</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">МАЛЕНЬКАЯ МАСТЕРСКАЯ · БОЛЬШАЯ ЛЮБОВЬ К ДЕТАЛЯМ</p>
+
+                    <h1>Игрушки, в которые вложена <span>душа.</span></h1>
+
+                    <p class="hero-description">
+                        Создаю необычных текстильных персонажей вручную —
+                        от выбора ткани до последнего стежка вышивки.
+                        Каждая игрушка получает свой характер и историю.
+                    </p>
+
+                    <a class="button button-primary" href="#collection">
+                        Смотреть коллекцию
+                    </a>
+                </div>
+
+                <div class="hero-art">
+                    <img src="images/igra1.jpg"
+                         alt="Авторская текстильная игрушка">
+                    <p>Создано вручную, с вниманием к каждой детали.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="collection" id="collection">
+            <div class="section-heading">
+                <p class="eyebrow">МОЯ КОЛЛЕКЦИЯ</p>
+                <h2>Каждая со своим характером</h2>
+                <p>Пять маленьких историй, созданных из ткани и нитей.</p>
+            </div>
+
+            <div class="toy-grid">
+                <article class="toy-card">
+                    <img src="images/igra1.jpg" alt="Игрушка номер один">
+                    <div class="toy-info">
+                        <h3>Сердце</h3>
+                        <p>Роковое настроение</p>
+                    </div>
+                </article>
+
+                <article class="toy-card">
+                    <img src="images/igra2.jpg" alt="Игрушка номер два">
+                    <div class="toy-info">
+                        <h3>Рыбка</h3>
+                        <p>Творение океана</p>
+                    </div>
+                </article>
+
+                <article class="toy-card">
+                    <img src="images/igra3.jpg" alt="Игрушка номер три">
+                    <div class="toy-info">
+                        <h3>Птичка</h3>
+                        <p>Райское наслаждение</p>
+                    </div>
+                </article>
+
+                <article class="toy-card">
+                    <img src="images/igra4.jpg" alt="Игрушка номер четыре">
+                    <div class="toy-info">
+                        <h3>Жук</h3>
+                        <p>Экокожа для любителей интересного</p>
+                    </div>
+                </article>
+
+                <article class="toy-card">
+                    <img src="images/igra5.jpg" alt="Игрушка номер пять">
+                    <div class="toy-info">
+                        <h3>Инжир</h3>
+                        <p>Аппетитный бархат</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-grid">
+                <div>
+                    <p class="eyebrow">О МАСТЕРСКОЙ</p>
+                    <h2>Не просто игрушки, а ручная работа с характером</h2>
+                </div>
+
+                <div class="about-text">
+                    <p>
+                        В основе моей работы — фетр. Он удобен в обработке,
+                        хорошо держит форму и позволяет создавать аккуратные
+                        детали. Также я использую мягкие ткани с бархатистой
+                        фактурой и экокожу, подбирая материал под характер
+                        каждого персонажа.
+                    </p>
+
+                    <p>
+                        Особое место занимает ручная вышивка. На неё уходят
+                        многие часы: каждый стежок требует внимания и терпения.
+                        Именно такие детали делают игрушку выразительной,
+                        неповторимой и по-настоящему авторской.
+                    </p>
+
+                    <div class="material-list">
+                        <span>Фетр</span>
+                        <span>Бархатистые ткани</span>
+                        <span>Экокожа</span>
+                        <span>Ручная вышивка</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="section-heading">
+                <p class="eyebrow">ДАВАЙТЕ ЗНАКОМИТЬСЯ</p>
+                <h2>Расскажите, что у вас на уме</h2>
+                <p>Оставьте сообщение — буду рад обсудить идеи и игрушки.</p>
+            </div>
+
+            <form class="contact-form">
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Как к вам обращаться?">
+
+                <label for="email">Электронная почта</label>
+                <input type="email" id="email" name="email"
+                       placeholder="name@example.com">
+
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" rows="5"
+                          placeholder="Напишите несколько слов..."></textarea>
+
+                <button class="button button-primary" type="submit">
+                    Отправить сообщение
+                </button>
+
+                <p class="form-note">
+                    Учебная форма: отправка сообщений пока не настроена.
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="logo" href="#home">soft things<span>.</span></a>
+        <p>Создано вручную, с вниманием к деталям.</p>
+    </footer>
+
+</body>
+</html>

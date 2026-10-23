@@ -1,8 +1,28 @@
 ```css
+
 /* 1. Общие настройки */
 
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+main,
+section,
+.hero-grid,
+.about-grid,
+.toy-grid {
+    min-width: 0;
 }
 
 html,
@@ -22,10 +42,6 @@ section,
 
 img {
     max-width: 100%;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -331,13 +347,17 @@ a:focus-visible {
     color: #E2D5D2;
 }
 
+
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    width: 100%;
     max-width: 600px;
+    min-width: 0;
     margin: 0 auto;
 }
+
 
 .contact-form label {
     margin-top: 8px;
@@ -346,15 +366,20 @@ a:focus-visible {
     font-weight: bold;
 }
 
+
 .contact-form input,
 .contact-form textarea {
+    display: block;
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     padding: 13px 14px;
     border: 1px solid #D6C9C7;
     border-radius: 6px;
     background-color: #F2EEE6;
     color: #29362F;
 }
+
 
 .contact-form textarea {
     resize: vertical;

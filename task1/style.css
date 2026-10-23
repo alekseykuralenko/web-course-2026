@@ -1,0 +1,163 @@
+
+/* 1. Общие настройки */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #101722;
+    color: #e5eaf0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* 2. Верхняя часть страницы */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px 40px;
+    gap: 10px;
+}
+
+header p {
+    margin: 0;
+    color: #aab8c8;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 42px;
+    color: #f2f5f8;
+}
+
+/* 3. Навигация */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px 20px;
+    background-color: #172333;
+    border-top: 1px solid #2c3d50;
+    border-bottom: 1px solid #2c3d50;
+}
+
+nav a {
+    color: #a9cbbd;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background-color: #263b39;
+    color: #ffffff;
+}
+
+/* 4. Основная область */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+section {
+    background-color: #182331;
+    border: 1px solid #2c3b4c;
+    border-radius: 16px;
+    padding: 26px;
+}
+
+section h2,
+footer h2 {
+    margin-top: 0;
+    color: #c58f96;
+}
+
+/* 5. Блок «О себе» */
+
+#about article {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+#about img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #527d70;
+    flex-shrink: 0;
+}
+
+/* 6. Образование */
+
+#education ul {
+    padding-left: 22px;
+}
+
+#education li {
+    margin-bottom: 10px;
+}
+
+/* 7. Навыки */
+
+#skills article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #203b35;
+    color: #c3e0d3;
+    border: 1px solid #3c6256;
+    border-radius: 20px;
+}
+
+/* 8. Контакты */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 35px 20px 45px;
+    background-color: #172333;
+    border-top: 1px solid #3a303c;
+}
+
+footer h2 {
+    margin-bottom: 4px;
+}
+
+footer a {
+    color: #d2a2a8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}

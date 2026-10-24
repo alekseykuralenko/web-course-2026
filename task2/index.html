@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Soft Things — игрушки ручной работы</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
     <header class="site-header">
         <a class="logo" href="#home">soft things<span>.</span></a>
 
-        <button class="menu-toggle" type="button" aria-label="Меню">
+        <button class="menu-toggle"
+                type="button"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+                aria-controls="main-navigation">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-        <nav class="nav-links" aria-label="Основная навигация">
+        <nav class="nav-links" id="main-navigation" aria-label="Основная навигация">
             <a href="#collection">Коллекция</a>
             <a href="#about">О мастерской</a>
             <a href="#contact">Связаться</a>

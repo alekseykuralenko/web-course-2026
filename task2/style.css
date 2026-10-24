@@ -106,6 +106,7 @@ h3 {
     padding: 18px 20px;
     background-color: #182A22;
     border-bottom: 1px solid #34483B;
+    position: relative;
 }
 
 .logo {
@@ -118,7 +119,16 @@ h3 {
     color: #C18A8C;
 }
 
-/* Кнопка бургера */
+/* Бургер-меню без JavaScript */
+
+.menu-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
 
 .menu-toggle {
     display: flex;
@@ -144,21 +154,14 @@ h3 {
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* При открытии бургера полоски становятся крестиком */
+/* Фокус при управлении клавиатурой */
 
-.menu-toggle[aria-expanded="true"] span:first-child {
-    transform: translateY(7px) rotate(45deg);
+.menu-checkbox:focus-visible + .menu-toggle {
+    outline: 3px solid #C18A8C;
+    outline-offset: 3px;
 }
 
-.menu-toggle[aria-expanded="true"] span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle[aria-expanded="true"] span:last-child {
-    transform: translateY(-7px) rotate(-45deg);
-}
-
-/* Мобильная навигация закрыта по умолчанию */
+/* Меню закрыто по умолчанию */
 
 .nav-links {
     display: none;
@@ -169,7 +172,9 @@ h3 {
     padding: 8px 0;
 }
 
-.nav-links.nav-open {
+/* Checkbox отмечен — меню открывается */
+
+.menu-checkbox:checked ~ .nav-links {
     display: flex;
 }
 
@@ -449,7 +454,7 @@ a:focus-visible {
     }
 
     .nav-links,
-    .nav-links.nav-open {
+    .menu-checkbox:checked ~ .nav-links {
         display: flex;
         flex-direction: row;
         align-items: center;

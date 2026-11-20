@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная 5: Simon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Simon</h1>
+        <p class="subtitle">Повтори последовательность</p>
+
+        <div class="stats">
+            <p>Уровень: <span id="level">0</span></p>
+            <p id="status" class="status">Нажми «Старт»</p>
+        </div>
+
+        <div class="game-board">
+            <button class="pad green" data-color="green"></button>
+            <button class="pad red" data-color="red"></button>
+            <button class="pad yellow" data-color="yellow"></button>
+            <button class="pad blue" data-color="blue"></button>
+        </div>
+
+        <button id="start-btn" class="start-btn">Старт</button>
+
+        <a href="../" class="back-link">← Назад к списку лаб</a>
+    </main>
+
+    <script type="module" src="controller.js"></script>
+</body>
+</html>

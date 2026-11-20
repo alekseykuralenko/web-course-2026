@@ -65,7 +65,12 @@ h1 {
 }
 
 .hidden {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .posts-container {

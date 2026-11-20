@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная 6: Змейка</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Змейка</h1>
+        <p class="subtitle">Управление: стрелки ← ↑ → ↓</p>
+
+        <div class="stats">
+            <p>Счёт: <span id="score">0</span></p>
+            <p id="status" class="status">Нажми «Старт»</p>
+        </div>
+
+        <canvas id="game-canvas" width="400" height="400"></canvas>
+
+        <button id="start-btn" class="start-btn">Старт</button>
+
+        <a href="../" class="back-link">← Назад к списку лаб</a>
+    </main>
+
+    <script type="module" src="controller.js"></script>
+</body>
+</html>

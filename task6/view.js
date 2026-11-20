@@ -25,22 +25,24 @@ export function drawGrid() {
         ctx.stroke();
     }
 }
+
 export function drawSnake(snake) {
     snake.forEach((segment, index) => {
-        const x = segment.x * CELL_SIZE + CELL_SIZE / 2;
-        const y = segment.y * CELL_SIZE + CELL_SIZE / 2;
-        const radius = CELL_SIZE / 2 - 1;
+        const x = segment.x * CELL_SIZE + 1;
+        const y = segment.y * CELL_SIZE + 1;
+        const size = CELL_SIZE - 2;
+        const radius = 4; 
 
         ctx.fillStyle = index === 0 ? '#4ade80' : '#166534';
         ctx.beginPath();
-        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        ctx.roundRect(x, y, size, size, radius);
         ctx.fill();
 
         if (index === 0) {
             ctx.fillStyle = '#ffffff';
             ctx.beginPath();
-            ctx.arc(x - 4, y - 3, 2, 0, Math.PI * 2);
-            ctx.arc(x + 4, y - 3, 2, 0, Math.PI * 2);
+            ctx.arc(x + size / 2 - 4, y + size / 2 - 3, 2, 0, Math.PI * 2);
+            ctx.arc(x + size / 2 + 4, y + size / 2 - 3, 2, 0, Math.PI * 2);
             ctx.fill();
         }
     });

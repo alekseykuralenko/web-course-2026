@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная 4: Быки и коровы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Быки и коровы</h1>
+        <p class="rules">Компьютер загадал 4-значное число с неповторяющимися цифрами. Угадайте его!</p>
+        
+        <div class="game-area">
+            <div class="input-group">
+                <input type="text" id="attempt-input" maxlength="4" placeholder="1234" inputmode="numeric">
+                <button id="submit-btn">Ход</button>
+            </div>
+            <p id="message" class="message"></p>
+            <p class="stats">Попыток: <span id="attempts-count">0</span></p>
+        </div>
+
+        <div class="history-area">
+            <h2>История ходов</h2>
+            <ul id="history-list" class="history-list"></ul>
+        </div>
+
+        <button id="restart-btn" class="restart-btn">Новая игра</button>
+        
+        <a href="../" class="back-link">← Назад к списку лаб</a>
+    </main>
+
+    <!-- Подключаем только контроллер как модуль, он сам импортирует остальное -->
+    <script type="module" src="controller.js"></script>
+</body>
+</html>

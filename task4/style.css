@@ -47,11 +47,18 @@ h1 {
 
 .input-group {
     display: flex;
+    flex-direction: column; /* На телефонах: поле и кнопка друг под другом */
     gap: 10px;
 }
 
+@media (min-width: 480px) {
+    .input-group {
+        flex-direction: row;
+    }
+}
+
 input {
-    flex: 1;
+    width: 100%; /* Гарантированно занимает всю ширину контейнера */
     padding: 12px;
     border-radius: 8px;
     border: 2px solid #334155;
@@ -62,8 +69,8 @@ input {
     letter-spacing: 4px;
     outline: none;
     transition: border-color 0.3s;
+    box-sizing: border-box; /* Важно: чтобы padding не увеличивал ширину больше 100% */
 }
-
 input:focus {
     border-color: #881337; /* Бордовый акцент при фокусе */
 }

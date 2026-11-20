@@ -4,10 +4,13 @@ const noMoreEl = document.getElementById('no-more');
 const errorEl = document.getElementById('error-message');
 const searchInput = document.getElementById('search-input');
 
-// Создание карточки одного поста
-function createPostCard(post) {
+function createPostCard(post, index) {
     const card = document.createElement('article');
     card.className = 'post-card';
+
+    const number = document.createElement('span');
+    number.className = 'post-number';
+    number.textContent = `#${index + 1}`;
 
     const title = document.createElement('h2');
     title.className = 'post-title';
@@ -21,6 +24,7 @@ function createPostCard(post) {
     author.className = 'post-author';
     author.innerHTML = `Автор: <span>#${post.userId}</span>`;
 
+    card.appendChild(number);
     card.appendChild(title);
     card.appendChild(body);
     card.appendChild(author);
@@ -28,11 +32,10 @@ function createPostCard(post) {
     return card;
 }
 
-// Полная перерисовка списка постов
 export function renderPosts(posts) {
     postsContainer.innerHTML = '';
-    posts.forEach(post => {
-        postsContainer.appendChild(createPostCard(post));
+    posts.forEach((post, index) => {
+        postsContainer.appendChild(createPostCard(post, index));
     });
 }
 

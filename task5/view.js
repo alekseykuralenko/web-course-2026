@@ -3,6 +3,34 @@ const statusEl = document.getElementById('status');
 const startBtn = document.getElementById('start-btn');
 const pads = document.querySelectorAll('.pad');
 
+// Web Audio API для генерации звуков
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+const FREQUENCIES = {
+    green: 261.63,
+    red: 329.63,
+    yellow: 392.00,
+    blue: 523.25,
+    error: 150.00
+};
+
+export function playTone(color) {
+    const frequency = FREQUENCIES[color] || FREQUENCIES.error;
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    oscillator.frequency.value = frequency;
+    oscillator.type = 'sine';
+
+    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + 0.3);
+}
+
 export function updateLevel(level) {
     levelEl.textContent = level;
 }

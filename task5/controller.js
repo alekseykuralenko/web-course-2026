@@ -1,5 +1,5 @@
 import { createInitialState, addRandomStep, handlePlayerInput } from './model.js';
-import { updateLevel, setStatus, flashPad, setPadsEnabled, setStartButtonEnabled, elements } from './view.js';
+import { updateLevel, setStatus, flashPad, setPadsEnabled, setStartButtonEnabled, playTone, elements } from './view.js';
 
 let state = createInitialState();
 
@@ -14,6 +14,7 @@ async function showSequence() {
 
     for (const color of state.sequence) {
         flashPad(color);
+        playTone(color);
         await sleep(600);
     }
 
@@ -34,11 +35,13 @@ function startNewGame() {
 async function handlePadClick(color) {
     if (state.isShowingSequence || state.isGameOver) return;
 
+    playTone(color);
     flashPad(color);
     const result = handlePlayerInput(state, color);
 
     if (!result.success) {
         state.isGameOver = true;
+        playTone('error');
         setPadsEnabled(false);
         setStatus(`Игра окончена! Уровень: ${state.level}`);
         setStartButtonEnabled(true);

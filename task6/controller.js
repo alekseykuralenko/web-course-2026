@@ -1,17 +1,21 @@
 import { createInitialState, spawnApple, updateDirection, moveSnake } from './model.js';
-import { drawGrid, drawSnake, drawApple, updateScore, setStatus, setStartButtonEnabled, elements } from './view.js';
-
+import { drawGrid, drawSnake, drawApple, updateScore, setStatus, setStartButtonEnabled, playEatSound, elements } from './view.js';
 let state = createInitialState();
 let lastMoveTime = 0;
-const MOVE_INTERVAL = 150; // миллисекунд между движениями
+const MOVE_INTERVAL = 150; 
 let animationId = null;
 
 function gameLoop(currentTime) {
     if (!state.isRunning) return;
 
-    if (currentTime - lastMoveTime >= MOVE_INTERVAL) {
+        if (currentTime - lastMoveTime >= MOVE_INTERVAL) {
+        const oldScore = state.score; // Запоминаем счёт до хода
         moveSnake(state);
         lastMoveTime = currentTime;
+
+        if (state.score > oldScore) {
+            playEatSound();
+        }
 
         if (state.isGameOver) {
             state.isRunning = false;
@@ -67,6 +71,5 @@ function handleKeydown(event) {
 elements.startBtn.addEventListener('click', startGame);
 document.addEventListener('keydown', handleKeydown);
 
-// Начальная отрисовка
 drawGrid();
 setStatus('Нажми «Старт»');

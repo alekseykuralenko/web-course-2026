@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 
 function TodoItem({ todo, onToggle, onEdit, onDelete }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -53,4 +53,4 @@ function TodoItem({ todo, onToggle, onEdit, onDelete }) {
   );
 }
 
-export default TodoItem;
+export default memo(TodoItem);

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 
 const MAX_TEXT_LENGTH = 100;
 
@@ -44,4 +44,4 @@ function TodoForm({ onAdd }) {
   );
 }
 
-export default TodoForm;
+export default memo(TodoForm);

@@ -161,3 +161,7 @@ input:focus, select:focus { outline: 2px solid var(--green); outline-offset: 1px
   .todo { flex-wrap: wrap; }
   .todo__actions { width: 100%; justify-content: flex-end; }
 }
+
+.toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+.sorting { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 0.9rem; }
+.sorting select { min-height: 40px; }

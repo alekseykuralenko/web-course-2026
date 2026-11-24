@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 function Stats({ stats }) {
   const { total, left, done } = stats;
   const percent = total === 0 ? 0 : Math.round((done / total) * 100);
@@ -16,4 +18,4 @@ function Stats({ stats }) {
   );
 }
 
-export default Stats;
+export default memo(Stats);

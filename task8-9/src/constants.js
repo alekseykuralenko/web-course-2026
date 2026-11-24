@@ -13,3 +13,12 @@ export const SAMPLE_TODOS = [
 export function createId() {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 }
+
+export const SORTS = [
+  { id: 'new', label: 'Сначала новые', compare: (a, b) => b.createdAt - a.createdAt },
+  { id: 'old', label: 'Сначала старые', compare: (a, b) => a.createdAt - b.createdAt },
+  { id: 'az', label: 'По алфавиту А → Я', compare: (a, b) => a.text.localeCompare(b.text, 'ru') },
+  { id: 'za', label: 'По алфавиту Я → А', compare: (a, b) => b.text.localeCompare(a.text, 'ru') },
+];
+
+export const STORAGE_KEY = 'todo-react:todos';

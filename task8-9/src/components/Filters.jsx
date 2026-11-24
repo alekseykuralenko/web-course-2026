@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 function Filters({ filters, activeId, onChange }) {
   return (
     <nav className="filters" aria-label="Фильтры">
@@ -15,4 +17,4 @@ function Filters({ filters, activeId, onChange }) {
   );
 }
 
-export default Filters;
+export default memo(Filters);
